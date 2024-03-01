@@ -12,11 +12,12 @@ class Grupo:
     def listadoAsignaturas(self, **kwargs):
         for x in kwargs.values():
             self._asignaturas.append(Asignatura(x))
-
+            
     def agregarAlumno(self, alumno, lista=[]):
         lista.append(alumno)
-        self.listadoAlumnos = lista[0::]
+        self.listadoAlumnos = lista[0:]
         lista.pop(0)
+        
         
 
     def __str__(self) -> str:
